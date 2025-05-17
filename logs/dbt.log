@@ -1,0 +1,90 @@
+[0m21:23:22.234620 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000022C50E19970>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000022C4F685F40>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000022C50C4F470>]}
+
+
+============================== 21:23:22.463216 | 4c6f8130-7439-4bd6-90f2-3fa8d882275e ==============================
+[0m21:23:22.463216 [info ] [MainThread]: Running with dbt=1.9.4
+[0m21:23:22.465217 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'write_json': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'fail_fast': 'False', 'profiles_dir': 'C:\\Users\\Rodrigo\\.dbt', 'log_path': 'logs', 'debug': 'False', 'version_check': 'True', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'empty': 'None', 'log_format': 'default', 'introspect': 'True', 'invocation_command': 'dbt init', 'static_parser': 'True', 'target_path': 'None', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'send_anonymous_usage_stats': 'True'}
+[0m21:23:23.103639 [warn ] [MainThread]: [ConfigFolderDirectory]: Unable to parse logging event dictionary. Failed to parse dir field: expected string or bytes-like object, got 'WindowsPath'.. Dictionary: {'dir': WindowsPath('C:/Users/Rodrigo/.dbt')}
+[0m21:23:23.106164 [info ] [MainThread]: Creating dbt configuration folder at 
+[0m21:23:47.187530 [debug] [MainThread]: Starter project path: C:\Users\Rodrigo\Documents\bootcamp_dbt\.venv\Lib\site-packages\dbt\include\starter_project
+[0m21:23:47.256464 [info ] [MainThread]: 
+Your new dbt project "projeto_bootcamp_dbt" was created!
+
+For more information on how to configure the profiles.yml file,
+please consult the dbt documentation here:
+
+  https://docs.getdbt.com/docs/configure-your-profile
+
+One more thing:
+
+Need help? Don't hesitate to reach out to us via GitHub issues or on Slack:
+
+  https://community.getdbt.com/
+
+Happy modeling!
+
+[0m21:23:47.260466 [info ] [MainThread]: Setting up your profile.
+[0m21:47:15.259332 [error] [MainThread]: Encountered an error:
+
+[0m21:47:15.394785 [error] [MainThread]: Traceback (most recent call last):
+  File "C:\Users\Rodrigo\Documents\bootcamp_dbt\.venv\Lib\site-packages\dbt\cli\requires.py", line 153, in wrapper
+    result, success = func(*args, **kwargs)
+                      ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Rodrigo\Documents\bootcamp_dbt\.venv\Lib\site-packages\dbt\cli\requires.py", line 103, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Rodrigo\Documents\bootcamp_dbt\.venv\Lib\site-packages\dbt\cli\main.py", line 477, in init
+    results = task.run()
+              ^^^^^^^^^^
+  File "C:\Users\Rodrigo\Documents\bootcamp_dbt\.venv\Lib\site-packages\dbt\task\init.py", line 346, in run
+    self.setup_profile(profile_name)
+  File "C:\Users\Rodrigo\Documents\bootcamp_dbt\.venv\Lib\site-packages\dbt\task\init.py", line 262, in setup_profile
+    self.create_profile_from_target(adapter, profile_name=profile_name)
+  File "C:\Users\Rodrigo\Documents\bootcamp_dbt\.venv\Lib\site-packages\dbt\task\init.py", line 179, in create_profile_from_target
+    self.create_profile_from_profile_template(profile_template, profile_name)
+  File "C:\Users\Rodrigo\Documents\bootcamp_dbt\.venv\Lib\site-packages\dbt\task\init.py", line 163, in create_profile_from_profile_template
+    target = self.generate_target_from_input(prompts, initial_target)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Rodrigo\Documents\bootcamp_dbt\.venv\Lib\site-packages\dbt\task\init.py", line 129, in generate_target_from_input
+    target[key] = click.prompt(
+                  ^^^^^^^^^^^^^
+  File "C:\Users\Rodrigo\Documents\bootcamp_dbt\.venv\Lib\site-packages\click\termui.py", line 168, in prompt
+    value = prompt_func(prompt)
+            ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Rodrigo\Documents\bootcamp_dbt\.venv\Lib\site-packages\click\termui.py", line 151, in prompt_func
+    raise Abort() from None
+click.exceptions.Abort
+
+[0m21:47:15.461936 [debug] [MainThread]: Command `dbt init` failed at 21:47:15.449610 after 1433.40 seconds
+[0m21:47:15.499346 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000022C50918B30>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000022C50B72FF0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000022C52420860>]}
+[0m21:47:15.514814 [debug] [MainThread]: Flushing usage events
+[0m21:47:16.638783 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m21:47:51.362110 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001A67B0AA3F0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001A67AEA1E80>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001A67AEA16D0>]}
+
+
+============================== 21:47:51.380069 | 2e310160-cced-4ba5-a2b9-5c22cef989ce ==============================
+[0m21:47:51.380069 [info ] [MainThread]: Running with dbt=1.9.4
+[0m21:47:51.380069 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'write_json': 'True', 'log_cache_events': 'False', 'partial_parse': 'True', 'cache_selected_only': 'False', 'profiles_dir': 'C:\\Users\\Rodrigo\\.dbt', 'version_check': 'True', 'fail_fast': 'False', 'log_path': 'logs', 'warn_error': 'None', 'debug': 'False', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'empty': 'None', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'introspect': 'True', 'log_format': 'default', 'static_parser': 'True', 'target_path': 'None', 'invocation_command': 'dbt init', 'send_anonymous_usage_stats': 'True'}
+[0m21:48:33.265453 [debug] [MainThread]: Starter project path: C:\Users\Rodrigo\Documents\bootcamp_dbt\.venv\Lib\site-packages\dbt\include\starter_project
+[0m21:48:33.324003 [info ] [MainThread]: 
+Your new dbt project "northwind" was created!
+
+For more information on how to configure the profiles.yml file,
+please consult the dbt documentation here:
+
+  https://docs.getdbt.com/docs/configure-your-profile
+
+One more thing:
+
+Need help? Don't hesitate to reach out to us via GitHub issues or on Slack:
+
+  https://community.getdbt.com/
+
+Happy modeling!
+
+[0m21:48:33.333099 [info ] [MainThread]: Setting up your profile.
+[0m21:49:45.086535 [info ] [MainThread]: Profile northwind written to C:\Users\Rodrigo\.dbt\profiles.yml using target's profile_template.yml and your supplied values. Run 'dbt debug' to validate the connection.
+[0m21:49:45.090304 [debug] [MainThread]: Command `dbt init` succeeded at 21:49:45.090304 after 113.99 seconds
+[0m21:49:45.090304 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001A67ACDEC30>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001A67B0E27E0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001A67B34AB40>]}
+[0m21:49:45.107739 [debug] [MainThread]: Flushing usage events
+[0m21:49:46.000001 [debug] [MainThread]: An error was encountered while trying to flush usage events
